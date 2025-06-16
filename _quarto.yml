@@ -4,6 +4,8 @@ project:
 
 website:
   title: "Work Notes"
+  comments: 
+    hypothesis: true
   cookie-consent: true
   repo-url: https://github.com/murphyqm/work-notes
   repo-actions: [edit, source, issue]
@@ -17,7 +19,6 @@ website:
             href:  https://github.com/murphyqm/work-notes/issues/new
 format:
   html:
-    hypothesis: true
     theme: cosmo
     css: styles.css
 
