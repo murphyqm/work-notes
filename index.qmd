@@ -1,0 +1,19 @@
+---
+title: "Open Work Notes"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: numbered
+  sort-ui: true
+  filter-ui: true
+page-layout: full
+title-block-banner: true
+---
+
+This website contains notes and snippets to be shared: it is an open lab notebook.
+
+You can find [my GitHub profile here](https://github.com/murphyqm) and (my personal projects site here)[https://murphyqm.github.io/].
+
+Please feel free to comment using the Hypothesis sidebar, or leave an issue/request a change on the GitHub repository.
+

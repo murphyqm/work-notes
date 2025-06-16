@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Work Notes"
+  cookie-consent: true
+  repo-url: https://github.com/murphyqm/work-notes
+  repo-actions: [edit, source, issue]
+  navbar:
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://github.com/murphyqm/work-notes
+          - text: Report a Bug
+            href:  https://github.com/murphyqm/work-notes/issues/new
+format:
+  html:
+    hypothesis: true
+    theme: cosmo
+    css: styles.css
+
+
+

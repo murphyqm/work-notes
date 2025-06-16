@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "posts/reproducibility/index.html",
+    "href": "posts/reproducibility/index.html",
+    "title": "Reproducibility, Replicability, & Reusability",
+    "section": "",
+    "text": "How do we define reproducibility, replicability, and reusability, and how do they tie together?\nI’ve defined these below in reference to “the original study”, the hypothetical work we are testing to see that it is reproducible, replicable, and the code/methods are reusable.\nI’ve provided some basic examples for each section. I’ve assumed the use of Python code just to be able to name specific packaging tools, but the ideas are language agnostic."
+  },
+  {
+    "objectID": "posts/reproducibility/index.html#reproducibility",
+    "href": "posts/reproducibility/index.html#reproducibility",
+    "title": "Reproducibility, Replicability, & Reusability",
+    "section": "Reproducibility",
+    "text": "Reproducibility\n\nWhen you or others are able to obtain the same results (within a certain tolerance) as the original study, when using the same input data, code, and coding environment, on the same computing platform as the original study.\n\n\nThis is important for verifying the integrity of the work and avoiding mistakes, computational errors, and fraud.\nReproducibility requires the following (wherever possible) to be accessible/shared:\n\nThe exact code used;\nThe exact data used;\nThe exact computational environment used (so a copy of your exported conda environment with exact pinned versions of all dependencies, or a container, details of the platform used)\n\nAn example of this going wrong is when people run Jupyter notebook cells out of order, leading to unreproducible results: in a sample of 936 published notebooks that would be executable in principle, Wang et al. (2020) found that 73% of them would not be reproducible with straightforward approaches, requiring the reader to infer (and often guess) the order in which the authors created the cells (Wang et al. 2020).\n\nTo find out more about using Conda environments for reproducibility, please read this blogpost on dependency management, and also check this documentation on dependencies, and work through the examples in this tutorial on Installing and Managing Applications on the HPC for a step-by-step guide."
+  },
+  {
+    "objectID": "posts/reproducibility/index.html#replicability",
+    "href": "posts/reproducibility/index.html#replicability",
+    "title": "Reproducibility, Replicability, & Reusability",
+    "section": "Replicability",
+    "text": "Replicability\n\nWhen you or others are able to produce results that align with the results of the original study, while using different input data and different code, but using the original studies methods or theories.\n\n\nThis is important for the validation of the results and conclusions of the study\nReplicability requires the following:\n\nClear and complete methodological documentation;\nDescription of assumptions and caveats.\n\nAn example of this going wrong is when people upload code without documentation, data without useful metadata, and environment files/containers without any guidelines as to how they were used, but haven’t compared their numerical outputs to an analytical case, and haven’t documented the maths they have used behind their code."
+  },
+  {
+    "objectID": "posts/reproducibility/index.html#reusability",
+    "href": "posts/reproducibility/index.html#reusability",
+    "title": "Reproducibility, Replicability, & Reusability",
+    "section": "Reusability",
+    "text": "Reusability\n\nWhen you or others are able to easily use the code or data produced as part of the original study, and potentially rework it and extend it for new applications, contexts, or studies.\n\n\nThis is important for open research, for collaboration and building on previous work, and to support reproducibility and replicability (as it allows other groups to use your code to try to reproduce your results, or to test different parameter spaces and see if they can replicate the conclusions you drew from your work).\nFor research code to be reusable, you need:\n\nGood documentation on how to install/run/modify the code;\n\nThis does not have to be formal - it can just be useful comments - but adhering to formal syntax etc. for documentation makes it easier to read and more useful!\nProviding useful shareable environment files (for example, a Conda environment file);\n\nNote that this is often different to a environment file for reproducibility - please read the links in the reproducibility section to understand the distinction!\n\nIncluding appropriate licensing so that people can legally use the code.\nA testing or validation suite to make sure that users are getting the correct results on their own computational system.\n\n\n\nReusability oftentimes gets sidelined to let reproducibility take the main stage, but it is essential - being able to produce the same results on a different platform hints at far more robust research code than only being able to reproduce the results on a single machine; obviously when it comes to floating point precision etc. systems, GPUs, builds, and compilers all will matter. This editorial in Nature Computer Science titled “But is the code (re)usable?” highlights this, and further ties together reusability and replicability as two sides of the same coin when it comes to computational research:\n\nWhile it is crucial to guarantee the reproducibility of the results reported in a paper, let us also not forget about the importance of making research artifacts reusable for the scientific community.\n\n\nReusability, which can also be referred to as replicability, goes beyond reproducibility: it entails obtaining consistent results with new data, and in some cases, in the context of a new scientific application. Making research artifacts, such as code, reusable allows other researchers to more easily investigate the same or similar scientific questions as new data become available and new ideas are developed, thus helping science progress at a faster pace.\n\n– Editorial, Nature Computer Science (Nature 2021)"
+  },
+  {
+    "objectID": "posts/reproducibility/index.html#conclusion",
+    "href": "posts/reproducibility/index.html#conclusion",
+    "title": "Reproducibility, Replicability, & Reusability",
+    "section": "Conclusion",
+    "text": "Conclusion\nThese three terms are closely interlinked, and should all be strived for when it comes to writing research code. This can feel daunting, which is why I often teach researchers to use the “DeReLiCT” acronym (to prevent your code falling apart) for preparing research code:\n\nDependencies:\n\nRecord your exact dependencies for reproducibility;\nRecord a shareable version of your dependencies that will work on other platforms for reusability and replicability;\nUse a dependency manager to make your life easier.\nContainerisation also works to support this.\n\nRepository:\n\nRecord your work (using version control effectively) in a Git repository, including a record of your working environment, and snapshot the version of code used to produce results and upload this to an archive (such as your university data repository, or Zenodo) for reproducibility;\nCreate a useful ReadMe file to help other people use your code, and include a shareable version of your environment file for reusability and replicability;\n\nLeverage tools available on plaforms like GitHub to build documentation to make the code more reusable.\n\n\nLicense:\n\nAdd an appropriate license to you shared repository for reusability;\n\nCitation:\n\nMake your work more easily citable and reusable by providing guidance on how others should reference your work\n\nTesting:\n\nEnsure the validity of your work by implementing a testing suite, both to test the code correctness, and also the scientific/research assumptions, for improved reproducibility and replicability.\nUse automated testing tools on GitHub to highlight this robustness, making your work more reusable.\n\n\nYou can read more about how to implement the above into a project workflow with my webapp Sustainable Software Development (you may have to click “Wake this webapp” as it is on a free hosting option and shuts down when not in use).\nAlso, the course notes here for SWD3: Software development practices for Research in Python will help you step through an example project."
+  },
+  {
+    "objectID": "posts/reproducibility/index.html#final-note",
+    "href": "posts/reproducibility/index.html#final-note",
+    "title": "Reproducibility, Replicability, & Reusability",
+    "section": "Final note",
+    "text": "Final note\nThis is a living document, a work in progress, and is my interpretation of the above ideas. Please contribute your suggestions using the Hypothesis annotator tool in the margin to leave comments!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Open Work Notes",
+    "section": "",
+    "text": "This website contains notes and snippets to be shared: it is an open lab notebook.\nYou can find my GitHub profile here and (my personal projects site here)[https://murphyqm.github.io/].\nPlease feel free to comment using the Hypothesis sidebar, or leave an issue/request a change on the GitHub repository.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nReproducibility, Replicability, & Reusability\n\n\n\n\n\n\nreproducibility\n\n\nreplicability\n\n\nreusability\n\n\n\nDefining these terms in the context of computational (or computationally-assisted) research\n\n\n\n\n\nJun 16, 2025\n\n\nMaeve Murphy Quinlan\n\n\n\n\n\n\nNo matching items"
+  }
+]
