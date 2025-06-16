@@ -11,6 +11,11 @@ citation:
 image: reproducibility_cycle.png
 image-alt: "A cyclical graph with three equal-sized segments, and arrows cycling between them. The segments read 'Reproducibility', 'Replicability', and 'Reusability', showing how these concepts are linked"
 bibliography: refs.bib
+format: 
+  html:
+    toc: true
+  typst:
+    toc: true
 ---
 
 How do we define reproducibility, replicability, and reusability, and how do they tie together?
