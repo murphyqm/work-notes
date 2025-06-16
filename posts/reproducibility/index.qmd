@@ -7,7 +7,7 @@ author:
     orcid: 0000-0003-2958-1008
 categories: [reproducibility, replicability, reusability]
 citation: 
-  url: https://murphyqm.github.io/posts/2024-12-20-teaching-python
+  url: https://murphyqm.github.io/work-notes/posts/reproducibility/
 image: reproducibility_cycle.png
 image-alt: "A cyclical graph with three equal-sized segments, and arrows cycling between them. The segments read 'Reproducibility', 'Replicability', and 'Reusability', showing how these concepts are linked"
 bibliography: refs.bib
